@@ -1,0 +1,20 @@
+{
+  "name": "first-gen-pathways-backend",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/jeff-johnson-tech/first-gen-pathways-backend#readme",
+  "bugs": {
+    "url": "https://github.com/jeff-johnson-tech/first-gen-pathways-backend/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeff-johnson-tech/first-gen-pathways-backend.git"
+  },
+  "license": "MIT",
+  "author": "Jeff Johnson",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
