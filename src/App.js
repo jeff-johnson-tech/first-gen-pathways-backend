@@ -1,25 +1,43 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import Navbar from './Navbar';
+import FrontPic from './images/front.png';
+import { Contact } from './Contact';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={
+          <div>
+            <h1 className='title'>FirstGen Pathways</h1>
+
+            <img className='front' src={FrontPic} alt="Peaceful Protesters" />
+            <div className='picBy'>
+              <p>(Photo by Jacquelyn Jimenez Romero/Washington State Standard)</p>
+              <p> Immigrant rights advocates were joined by several state lawmakers on a cold,
+                cloudy day to advocate for bills supporting immigrants.</p>
+            </div>
+            <h2 className='aboutTitle'>About FirstGen Pathways </h2>
+            <p className='about'>Our goal is to help college students reach their dreams of attending college.
+              We understand the challenge that undocumented college students face, and we would like to help find a solution. If you are a student who needs assistance
+              covering your college costs please take a look at our resources! </p>
+          </div>
+        } >
+        </Route>
+        <Route path='/contact' element={<Contact />} >
+        </Route>
+      </Routes>
+
+      <footer className='footer' >
+        <span>&copy; 2025 FirstGen Pathways. All rights reserved.</span>
+        <Link to="/contact">
+          <h3 className="hover:underline">Contact Us</h3>
+        </Link>
+      </footer>
+    </BrowserRouter >
   );
 }
-
 export default App;

@@ -1,0 +1,77 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  color: white;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.navbar-header {
+    width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.logo{
+    height: 18vh;
+    object-fit: contain;
+}
+.navbar-toggle {
+    position:absolute;
+    right: 20px;
+  background: none;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-size: 10vh;
+  cursor: pointer;
+  z-index:11;
+}
+
+/* The dropdown panel */
+.navbar-links {
+    position: fixed;
+    top: 150px;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: rgb(255, 255, 255);
+    padding: 40px 20px;
+    box-shadow: -2px 0 10px rgba(243, 205, 205, 0.2);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 10;
+    border: #0c0c0c 7px solid;
+}
+
+.navbar-links.open {
+    transform: translateX(0);
+}
+
+.navList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.navbar-links ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-links li {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.navbar-links a {
+  color: rgb(14, 13, 13);
+  text-decoration: none;
+  font-size: 4vh;
+}
